@@ -1,0 +1,28 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+// Mixins and Functions
+@import 'mixins';
+
+// Theme
+@import 'theme';
+@import 'footer';
+
+// Components
+@import 'components/portal-lojista';
+@import 'components/info-news';
+@import 'components/cards-lojas';
+@import 'components/conveniencias-svg';
+@import 'components/contato';
+@import 'components/social-icons';
+@import 'components/cards-theme';
+
+// Custom Pages
+@import 'mercado-paralelo';

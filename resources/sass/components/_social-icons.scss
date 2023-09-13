@@ -1,0 +1,18 @@
+.social-icons {
+    @include flexAlign(center);
+    gap: 1rem;
+    margin-top: 5rem;
+    @include media(tablet-and-phone) {
+        margin-top: 0;
+    }
+    
+    a {
+        @include component-style($bg-theme);
+        @include flexAlign(center);
+        width: 35px;
+        height: 35px;
+        border-radius: 1rem;
+        text-decoration: none;
+    }
+
+  }

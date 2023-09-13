@@ -1,0 +1,22 @@
+.portal-lojista {
+    @include flexAlign(center);
+    @include component-style(#C5C5C5);
+    gap: 0.35rem;
+    color: #ffffff;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    width: 150px;
+    height: 27px;
+    border-radius: 1rem 0 0 1rem;
+    @include media(tablet-and-phone) {
+        position: static;
+        border-radius: 1rem;
+    }
+
+    .bi-key-fill {
+        &::before {
+            transform: rotate(130deg);
+        }
+    }
+}

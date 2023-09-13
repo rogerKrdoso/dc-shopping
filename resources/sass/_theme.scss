@@ -1,0 +1,44 @@
+#bannerHome {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section__space {
+    margin: 3.5rem 0;
+  }
+
+.img-categ {
+    .img-fluid {
+        height: 130px;
+    }
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.btn-theme {
+    @include component-style($bg-theme);
+    &:hover {
+        color: #fff;
+    }
+}
+
+.view-cards {
+    background: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);
+    padding: 2rem 0;
+
+    .search__st {
+        .input-group {
+            .form-control {
+                border-radius: 1rem 0 0 1rem;
+                border: 0;
+            }
+            .input-group-text {
+                border-radius: 0 1rem 1rem 0;
+                border: 0;
+            }
+        }
+    }
+}

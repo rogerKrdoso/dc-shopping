@@ -1,0 +1,35 @@
+#footer {
+    background-color: #D9D9D9;
+
+    .footer-infos {
+        border-left: 2px SOLID #C0C0C0;
+        border-right: 2px SOLID #C0C0C0;
+        padding: 0 1rem;
+        @include media(phone) {
+            text-align: center;
+        }
+        @include media(tablet-and-phone) {
+            border: 0;
+        }
+
+        .group-actions {
+            @include media(phone) {
+                flex-wrap: wrap;
+            }
+
+            a {
+                @include media(phone) {
+                    flex: 1;
+                    min-width: calc(50% - 20px);
+                }
+            }
+        }
+
+        .acessos-footer {
+            @include media(tablet-and-phone) {
+                flex-direction: column;
+            }
+          }
+
+    }
+}

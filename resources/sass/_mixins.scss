@@ -1,0 +1,68 @@
+// Função para Flex Content
+@mixin flexAlign($content: start) {
+    display: flex;
+    align-items: center;
+  
+    @if $content == center {
+      justify-content: center;
+    }
+    @else if $content == end {
+      justify-content: end;
+    }
+    @else {
+      justify-content: start;
+    }
+}
+
+// Função para calcular a cor do texto com base na cor de fundo
+@function calculate-text-color($background-color) {
+    $luminance: lightness($background-color);
+    @if ($luminance > 50%) {
+      @return #000; // Return dark text if the background is light
+    } @else {
+      @return #fff; // Return light text if the background is dark
+    }
+  }
+  
+  // Função para aplicar estilos a um componente com cor de fundo dinâmica
+  @mixin component-style($background-color) {
+    background-color: $background-color;
+    color: calculate-text-color($background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($background-color, 10%);
+    }
+  }
+
+// Mixin para media queries
+@mixin media($breakpoint) {
+    @if $breakpoint == phone {
+      @media (max-width: 767px) {
+        @content;
+      }
+    }
+    @else if $breakpoint == tablet {
+      @media (min-width: 768px) and (max-width: 1023px) {
+        @content;
+      }
+    }
+    @else if $breakpoint == desktop {
+      @media (min-width: 1024px) {
+        @content;
+      }
+    }
+    @else if $breakpoint == tablet-and-phone {
+        @media (max-width: 1023px) {
+          @content;
+        }
+    }
+    // Adicione mais breakpoints conforme necessário
+  }
+  
+  @mixin transition($property, $duration, $timing-function) {
+    -webkit-transition: #{$property} $duration $timing-function;
+    -moz-transition: #{$property} $duration $timing-function;
+    -o-transition: #{$property} $duration $timing-function;
+    transition: #{$property} $duration $timing-function;
+  }

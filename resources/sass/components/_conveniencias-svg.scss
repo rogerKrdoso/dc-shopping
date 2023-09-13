@@ -1,0 +1,24 @@
+.conveniencias-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.conveniencia-items {
+    flex: 1;
+    min-width: calc(12.5% - 20px); /* Para 8 elementos por linha no desktop */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    .conveniencia-items {
+        min-width: calc(25% - 20px); /* Para 4 elementos por linha no tablet */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .conveniencia-items {
+        min-width: calc(50% - 20px); /* Para 3 elementos por linha no mobile */
+    }
+}
